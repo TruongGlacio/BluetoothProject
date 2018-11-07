@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cloud" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Robocar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTitle"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCloud"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CHƯA KẾT NỐI"
+            android:textColor="@color/colorDisable" />
+
+        <TextView
+            android:id="@+id/tvRobocar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CHƯA KẾT NỐI"
+            android:textColor="@color/colorDisable" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/llInfo" />
+
+    <LinearLayout
+        android:id="@+id/llGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEmpty"
+        android:gravity="center">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/colorButtonNormal"
+            fab:fab_colorPressed="@color/colorButtonPressed"
+            fab:fab_icon="@mipmap/ic_go" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llGo"
+        android:gravity="center">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            fab:fab_colorNormal="@color/colorButtonNormal"
+            fab:fab_colorPressed="@color/colorButtonPressed"
+            fab:fab_icon="@mipmap/ic_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            fab:fab_colorNormal="@color/colorButtonNormal"
+            fab:fab_colorPressed="@color/colorButtonPressed"
+            fab:fab_icon="@mipmap/ic_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llLeftRight"
+        android:gravity="center">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/colorButtonNormal"
+            fab:fab_colorPressed="@color/colorButtonPressed"
+            fab:fab_icon="@mipmap/ic_back" />
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        fab:fab_colorNormal="@color/colorButtonNormal"
+        fab:fab_colorPressed="@color/colorButtonPressed"
+        fab:fab_icon="@mipmap/ic_stop" />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        fab:fab_colorNormal="@color/colorButtonNormal"
+        fab:fab_colorPressed="@color/colorButtonPressed"
+        fab:fab_icon="@mipmap/ic_quit" />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabStop"
+        fab:fab_colorNormal="@color/colorButtonNormal"
+        fab:fab_colorPressed="@color/colorButtonPressed"
+        fab:fab_icon="@mipmap/ic_map" />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabMap"
+        fab:fab_colorNormal="@color/colorButtonNormal"
+        fab:fab_colorPressed="@color/colorButtonPressed"
+        fab:fab_icon="@mipmap/ic_stream" />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabQuit"
+        android:layout_alignParentRight="true"
+        fab:fab_colorNormal="@color/colorButtonNormal"
+        fab:fab_colorPressed="@color/colorButtonPressed"
+        fab:fab_icon="@mipmap/ic_disconnect" />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabDisconnect"
+        android:layout_alignParentRight="true"
+        fab:fab_colorNormal="@color/colorButtonNormal"
+        fab:fab_colorPressed="@color/colorButtonPressed"
+        fab:fab_icon="@mipmap/ic_connect" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developed by Aerospace Laboratory, HUST"
+        android:id="@+id/tvTest"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
